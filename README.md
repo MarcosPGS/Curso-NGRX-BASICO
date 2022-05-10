@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## BOODSTRAP 5
+
+https://getbootstrap.com/
+
+## NGRX
+
+https://ngrx.io/
+
+npm install @ngrx/store --save
+npm install @ngrx/store-devtools --save
+npm install @ngrx/effects --save
+
+## JSON-SERVER
+
+https://www.npmjs.com/package/json-server
+
+## CUNCURRENTLY
+
+https://www.npmjs.com/package/concurrently

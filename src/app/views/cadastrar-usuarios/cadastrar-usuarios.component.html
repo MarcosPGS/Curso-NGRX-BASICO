@@ -1,0 +1,103 @@
+<div class="container pt-5">
+  <h1>CADASTRAR USUARIO</h1>
+</div>
+<div class="container pt-5">
+
+    <form
+      [formGroup]="form"
+      class="row needs-validation" novalidate
+      (ngSubmit)="salvar()"
+    >
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          formControlName="nome"
+          name="Nome"
+          required
+          [ngClass]="{
+            'is-invalid':
+              (form.get('nome')?.dirty || form.get('nome')?.touched) &&
+              form.get('nome')?.invalid &&
+              form.get('nome')?.hasError('required')
+          }"
+        />
+        <div
+          style="color: red"
+          *ngIf="
+            (form.get('nome')?.dirty || form.get('nome')?.touched) &&
+            form.get('nome')?.invalid &&
+            form.get('nome')?.hasError('required')
+          "
+        >
+          Campo obrigatorio.
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="nome">Idade:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="idade"
+          formControlName="idade"
+          name="idade"
+          required
+          [ngClass]="{
+            'is-invalid':
+              (form.get('idade')?.dirty || form.get('idade')?.touched) &&
+              form.get('idade')?.invalid &&
+              form.get('idade')?.hasError('required')
+          }"
+        />
+        <div
+          style="color: red"
+          *ngIf="
+            (form.get('idade')?.dirty || form.get('idade')?.touched) &&
+            form.get('idade')?.invalid &&
+            form.get('idade')?.hasError('required')
+          "
+        >
+          Campo obrigatorio.
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="perfil">Perfil:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="perfil"
+          formControlName="perfil"
+          name="perfil"
+          required
+          [ngClass]="{
+            'is-invalid':
+              (form.get('perfil')?.dirty || form.get('perfil')?.touched) &&
+              form.get('perfil')?.invalid &&
+              form.get('perfil')?.hasError('required')
+          }"/>
+        <div
+          style="color: red"
+          *ngIf="
+            (form.get('perfil')?.dirty || form.get('perfil')?.touched) &&
+            form.get('perfil')?.invalid &&
+            form.get('perfil')?.hasError('required')
+          ">
+          Campo obrigatorio.
+        </div>
+      </div>
+    
+      <div class="col-12 pt-3">
+        <button class="btn btn-primary me-3" type="submit" [routerLink]="['/']">
+            VOLTAR
+          </button>
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+          SALVAR
+        </button>
+      </div>
+    </form>
+</div>
+
